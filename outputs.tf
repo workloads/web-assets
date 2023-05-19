@@ -1,3 +1,11 @@
+output "aws_cli_commands" {
+  description = "AWS CLI Command for CloudFront operations."
+
+  value = {
+    create_invalidation = "aws cloudfront create-invalidation --distribution-id '${module.web_assets.aws_cloudfront_distribution.id}' --paths '/*'"
+  }
+}
+
 output "aws_cloudfront_aliases" {
   description = "Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`."
   value       = module.web_assets.aws_cloudfront_distribution.aliases
@@ -18,12 +26,4 @@ output "aws_console_urls" {
 output "aws_s3_bucket" {
   description = "Exported Attribute for `module.web_assets.aws_s3_bucket`."
   value       = module.web_assets.aws_s3_bucket.bucket
-}
-
-output "aws_cli_commands" {
-  description = "AWS CLI Command for CloudFront operations."
-
-  value = {
-    create_invalidation = "aws cloudfront create-invalidation --distribution-id '${module.web_assets.aws_cloudfront_distribution.id}' --paths '/*'"
-  }
 }
