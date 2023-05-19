@@ -20,15 +20,10 @@ output "aws_s3_bucket" {
   value       = module.web_assets.aws_s3_bucket.bucket
 }
 
-output "workspace_url" {
-  description = "Terraform Cloud Workspace URL."
-  value       = "https://app.terraform.io/app/${var.github_owner}/workspaces/repositories"
-}
-
-output "nomad_pack_registry_commands" {
-  description = "Nomad Pack CLI Commands for Registry operations."
+output "aws_cli_commands" {
+  description = "AWS CLI Command for CloudFront operations."
 
   value = {
-    add_registry = "nomad-pack registry add ${var.github_owner} ${local.pack_registry_repository_url}"
+    create_invalidation = "aws cloudfront create-invalidation --distribution-id '${module.web_assets.aws_cloudfront_distribution.id}' --paths '/*'"
   }
 }

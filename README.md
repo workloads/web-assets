@@ -7,6 +7,8 @@
 <!-- TOC -->
 * [Terraform Cloud Workspace `web-assets`](#terraform-cloud-workspace-web-assets)
   * [Table of Contents](#table-of-contents)
+    * [Inputs](#inputs)
+    * [Outputs](#outputs)
   * [Author Information](#author-information)
   * [License](#license)
 <!-- TOC -->
@@ -24,6 +26,7 @@
 
 | Name | Description |
 |------|-------------|
+| aws_cli_commands | AWS CLI Command for CloudFront operations. |
 | aws_cloudfront_aliases | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`. |
 | aws_cloudfront_domain_name | Exported Attribute for `module.web_assets.aws_cloudfront_distribution.domain_name`. |
 | aws_console_urls | AWS Console URLs. |
