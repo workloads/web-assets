@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `web-assets`
 
-> This directory manages the lifecycle of web redirects for [@workloads](https://github.com/workloads).
+> This directory manages Web-accessible Assets for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 

@@ -6,7 +6,7 @@ provider "aws" {
   # see https://registry.terraform.io/providers/hashicorp/aws/latest/docs#default_tags
   default_tags {
     tags = {
-      "github:url" = "https://github.com/workloads/web-redirects"
+      "github:url" = "https://github.com/workloads/web-assets"
     }
   }
 }
@@ -22,7 +22,7 @@ provider "aws" {
   # see https://registry.terraform.io/providers/hashicorp/aws/latest/docs#default_tags
   default_tags {
     tags = {
-      "github:url" = "https://github.com/workloads/web-redirects"
+      "github:url" = "https://github.com/workloads/web-assets"
     }
   }
 }
