@@ -20,6 +20,7 @@
 |------|-------------|------|:--------:|
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
 | domain | Parent Domain. | `string` | no |
+| redirect_paths | List of S3 Paths to create `index.html` redirects in. | <pre>list(object({<br>    name       = string<br>    target     = string<br>  }))</pre> | no |
 | subdomain | Subdomain. | `string` | no |
 
 ### Outputs

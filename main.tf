@@ -23,18 +23,25 @@ module "web_assets" {
   subdomain_name = var.subdomain
 }
 
+# render `index.html` for all items in `var.redirect_paths` to prevent sub-directory listings
 # see https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object
-resource "aws_s3_object" "index" {
-  bucket = module.web_assets.aws_s3_bucket.id
+resource "aws_s3_object" "redirects" {
+  for_each = {
+    for redirect in var.redirect_paths : redirect.name => redirect
+  }
 
-  # see https://developer.hashicorp.com/terraform/language/functions/basename
-  key = "index.html"
+  bucket = module.web_assets.aws_s3_bucket.id
+  key    = "${each.value.name}/index.html"
 
   # see https://developer.hashicorp.com/terraform/language/functions/templatefile
   content = templatefile("./templates/index.tftpl.html", {
-    redirect_target = "https://${var.domain}/"
+    target = each.value.target
   })
+
+  tags = {
+    "redirect:key" = each.value.name
+    "redirect:url" = each.value.target
+  }
 
   content_type = "text/html"
 }
-

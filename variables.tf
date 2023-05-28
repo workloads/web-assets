@@ -9,6 +9,25 @@ variable "domain" {
   default     = "workloads.io"
 }
 
+variable "redirect_paths" {
+  type = list(object({
+    name       = string
+    target     = string
+  }))
+
+  description = "List of S3 Paths to create `index.html` redirects in."
+
+  default = [
+    {
+      name   = "."
+      target = "https://workloads.io"
+    }, {
+      name   = "nomad-pack-registry"
+      target = "https://github.com/workloads/nomad-pack-registry"
+    },
+  ]
+}
+
 variable "subdomain" {
   type        = string
   description = "Subdomain."
