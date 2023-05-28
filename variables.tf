@@ -11,8 +11,8 @@ variable "domain" {
 
 variable "redirect_paths" {
   type = list(object({
-    name       = string
-    target     = string
+    name   = string
+    target = string
   }))
 
   description = "List of S3 Paths to create `index.html` redirects in."
@@ -21,7 +21,7 @@ variable "redirect_paths" {
     {
       name   = "."
       target = "https://workloads.io"
-    }, {
+      }, {
       name   = "nomad-pack-registry"
       target = "https://github.com/workloads/nomad-pack-registry"
     },
