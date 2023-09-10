@@ -29,8 +29,10 @@
 |------|-------------|
 | aws_cli_commands | AWS CLI Command for CloudFront operations. |
 | aws_cloudfront_aliases | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`. |
+| aws_cloudfront_distribution_id | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.id`. |
 | aws_cloudfront_domain_name | Exported Attribute for `module.web_assets.aws_cloudfront_distribution.domain_name`. |
 | aws_console_urls | AWS Console URLs. |
+| aws_region | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`. |
 | aws_s3_bucket | Exported Attribute for `module.web_assets.aws_s3_bucket`. |
 <!-- END_TF_DOCS -->
 
