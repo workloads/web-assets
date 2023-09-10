@@ -21,7 +21,7 @@ output "aws_cloudfront_domain_name" {
   value       = module.web_assets.aws_cloudfront_distribution.domain_name
 }
 
-output "aws_console_urls" {
+output "aws_console_url" {
   description = "AWS Console URL."
   value       = "https://us-east-1.console.aws.amazon.com/cloudfront/v3/home?region=${var.management_region_aws}#/distributions/${module.web_assets.aws_cloudfront_distribution.id}"
 }
