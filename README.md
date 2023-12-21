@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `web-assets`
 
-> This directory manages Web-accessible Assets for [@workloads](https://github.com/workloads).
+> This repository manages web-accessible assets for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
@@ -17,11 +17,11 @@
 
 ## Requirements
 
-- HashiCorp Terraform `1.5.x` or [newer](https://developer.hashicorp.com/packer/downloads)
+- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
 
 Optional, and only needed for documentation generation:
 
-- `terraform-docs` `0.16.0` or [newer](https://terraform-docs.io/user-guide/installation/)
+- `terraform-docs` `0.17.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
 ## Usage
 
@@ -47,7 +47,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | aws_cloudfront_aliases | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`. |
 | aws_cloudfront_distribution_id | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.id`. |
 | aws_cloudfront_domain_name | Exported Attribute for `module.web_assets.aws_cloudfront_distribution.domain_name`. |
-| aws_console_urls | AWS Console URLs. |
+| aws_console_url | AWS Console URL. |
 | aws_region | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`. |
 | aws_s3_bucket | Exported Attribute for `module.web_assets.aws_s3_bucket`. |
 <!-- END_TF_DOCS -->
