@@ -8,9 +8,12 @@
 * [Terraform Cloud Workspace `web-assets`](#terraform-cloud-workspace-web-assets)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
+    * [Development](#development)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
+  * [Notes](#notes)
+    * [Sensitive Data](#sensitive-data)
   * [Contributors](#contributors)
   * [License](#license)
 <!-- TOC -->
@@ -19,7 +22,9 @@
 
 - HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
 
-Optional, and only needed for documentation generation:
+### Development
+
+For development and testing of this repository:
 
 - `terraform-docs` `0.17.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
@@ -51,6 +56,12 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | aws_region | Exported Attributes for `module.web_assets.aws_cloudfront_distribution.aliases`. |
 | aws_s3_bucket | Exported Attribute for `module.web_assets.aws_s3_bucket`. |
 <!-- END_TF_DOCS -->
+
+## Notes
+
+### Sensitive Data
+
+Terraform state may contain [sensitive data](https://developer.hashicorp.com/terraform/language/state/sensitive-data). This workspace uses [Terraform Cloud](https://developer.hashicorp.com/terraform/cloud-docs) to safely store state, and encrypt the data at rest.
 
 ## Contributors
 
