@@ -1,4 +1,4 @@
-# Terraform Cloud Workspace `web-assets`
+# HCP Terraform Workspace `web-assets`
 
 > This repository manages web-accessible assets for [@workloads](https://github.com/workloads).
 
