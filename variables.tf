@@ -33,3 +33,9 @@ variable "subdomain" {
   description = "Subdomain."
   default     = "assets"
 }
+
+variable "tfe_team_token_viewers" {
+  type        = string
+  description = "HCP Terraform `viewers` Team Token."
+  sensitive   = true
+}

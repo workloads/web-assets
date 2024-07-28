@@ -23,6 +23,12 @@ terraform {
       source  = "hashicorp/random"
       version = ">= 3.6.2, < 4.0.0"
     }
+
+    # see https://registry.terraform.io/providers/hashicorp/tfe/0.57.0
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "0.57.0"
+    }
   }
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version
