@@ -5,7 +5,7 @@
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace `web-assets`](#terraform-cloud-workspace-web-assets)
+* [HCP Terraform Workspace `web-assets`](#hcp-terraform-workspace-web-assets)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
     * [Development](#development)
@@ -61,7 +61,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 ### Sensitive Data
 
-Terraform state may contain [sensitive data](https://developer.hashicorp.com/terraform/language/state/sensitive-data). This workspace uses [Terraform Cloud](https://developer.hashicorp.com/terraform/cloud-docs) to safely store state, and encrypt the data at rest.
+Terraform state may contain [sensitive data](https://developer.hashicorp.com/terraform/language/state/sensitive-data). This workspace uses [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs) to safely store state, and encrypt the data at rest.
 
 ## Contributors
 
